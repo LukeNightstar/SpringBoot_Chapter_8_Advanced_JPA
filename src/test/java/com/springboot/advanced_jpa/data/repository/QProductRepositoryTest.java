@@ -15,6 +15,7 @@ public class QProductRepositoryTest {
     @Autowired
     QProductRepository qProductRepository;
 
+    // 실행 오류 시 properties 파일의 MARIA DB 세팅 주석 처리 후 실행
     @Test
     public void queryDSLTest1() {
         Predicate predicate = QProduct.product.name.containsIgnoreCase("펜")
