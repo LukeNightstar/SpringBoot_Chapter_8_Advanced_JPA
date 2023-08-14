@@ -20,7 +20,7 @@ public class QProductRepositoryTest {
         Predicate predicate = QProduct.product.name.containsIgnoreCase("펜")
                 .and(QProduct.product.price.between(1000, 2500));
         Optional<Product> foundProduct = qProductRepository.findOne(predicate);
-        if (foundProduct.isPresent()) {
+        if(foundProduct.isPresent()){
             Product product = foundProduct.get();
             System.out.println(product.getNumber());
             System.out.println(product.getName());

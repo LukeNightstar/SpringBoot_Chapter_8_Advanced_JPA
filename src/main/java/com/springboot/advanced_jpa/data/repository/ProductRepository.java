@@ -15,25 +15,21 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     // find...By
     Optional<Product> findByNumber(Long number);
-
     List<Product> findAllByName(String name);
-
     Product queryByNumber(Long number);
 
     // exists...By
     boolean existsByNumber(Long number);
 
-    // count..By
+    // count...By
     long countByName(String name);
 
     // delete...By, remove...Byvoid
     void deleteByNumber(Long number);
-
     long removeByName(String name);
 
     // ...First<number>...,Top<Number>...
     List<Product> findFirst5ByName(String name);
-
     List<Product> findTop10ByName(String name);
 
     List<Product> findByName(String name, Sort sort);
